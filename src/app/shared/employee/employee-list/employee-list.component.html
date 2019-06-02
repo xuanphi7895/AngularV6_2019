@@ -1,0 +1,58 @@
+<!-- <table class="table table-sm table-hover">
+  <tr *ngFor="let employee of employeeService.employeeList">
+    <td>{{employee.FirstName}} - {{employee.LastName}}</td>
+    <td>{{employee.EmpCode}}</td>
+    <td>
+      <a class="btn" (click)="showForEdit(employee)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger" (click)="onDelete(employee.EmployeeID)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table> -->
+<!-- <p *ngFor="let alert of alerts">
+  <ngb-alert [type]="alert.type" (close)="close(alert)">{{ alert.message }}</ngb-alert>
+</p>
+<p>
+  <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+</p> -->
+<div class="col-md-12">  
+  <h2> User Details</h2>  
+  <div class="table-responsive table-container">  
+    <table class="table">  
+      <thead>  
+        <tr>  
+          <th>id</th>  
+          <th>name</th>  
+          <th>username</th>  
+          <th>address</th>
+          <th>phone</th>   
+          <th>website</th>   
+        </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let emp of employees">  
+          <td class="hidden">{{emp.ID}}</td>  
+          <td>{{emp.FirstName}}</td>  
+          <td>{{emp.Office}}</td>  
+          <td>{{emp.LastName}}</td>  
+          <td>{{emp.EmpCode}}</td>  
+          <td>{{emp.Position}}</td>    
+          <!-- <td class="hidden">{{emp.id}}</td>  
+          <td>{{emp.name}}</td>  
+          <td>{{emp.username}}</td>  
+          <td>{{emp.address.street}}</td>   
+          <td>{{emp.phone}}</td>   
+          <td>{{emp.website}}</td>  
+          <td>{{emp.company.name}}</td>    -->
+          <td>  
+            <button (click)="deleteEmp(emp)" class="btn btn-info"> Delete</button>  
+            <button (click)="editEmp(emp)" style="margin-left: 20px;" class="btn btn-info"> Edit</button>  
+          </td>  
+        </tr>  
+      </tbody>  
+    </table>  
+  </div>  
+</div> 
